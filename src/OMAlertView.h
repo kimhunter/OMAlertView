@@ -8,19 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^OMAlertButtonCompletionBlock)(void);
+typedef void (^OMAlertViewBlock)(void);
 
 @interface OMAlertView : UIAlertView<UIAlertViewDelegate>
 {
     NSMutableDictionary *buttonBlocks;
 }
 
+@property (nonatomic, copy) OMAlertViewBlock willPresentAlertViewBlock;
+@property (nonatomic, copy) OMAlertViewBlock didPresentAlertViewBlock;
+
 + (id)alertView;
 + (id)alertViewWithTitle:(NSString *)title message:(NSString *)message;
-+ (void)showCancelOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertButtonCompletionBlock)completionBlock;
-+ (void)showOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertButtonCompletionBlock)completionBlock;
++ (void)showCancelOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertViewBlock)completionBlock;
++ (void)showOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertViewBlock)completionBlock;
 
-
-- (void)addButtonWithTitle:(NSString *)aTitle andCompletionBlock:(OMAlertButtonCompletionBlock)completionBlock;
+- (void)addButtonWithTitle:(NSString *)aTitle andCompletionBlock:(OMAlertViewBlock)completionBlock;
 
 @end
