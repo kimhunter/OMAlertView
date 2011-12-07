@@ -84,15 +84,11 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *clickedButtonTitle = [alertView buttonTitleAtIndex:buttonIndex];
-
-    if (!clickedButtonTitle)
-        return;
+    OMAlertViewBlock completionBlock = nil;
     
-    OMAlertViewBlock compBlock = [buttonBlocks objectForKey:clickedButtonTitle];
-
-    if (compBlock)
+    if (clickedButtonTitle && (completionBlock = [buttonBlocks objectForKey:clickedButtonTitle]))
     {
-        compBlock();
+        completionBlock();
     }
 }
 
