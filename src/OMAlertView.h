@@ -15,6 +15,8 @@ typedef void (^OMAlertButtonCompletionBlock)(void);
 }
 
 - (void)addButtonWithTitle:(NSString *)aTitle andCompletionBlock:(OMAlertButtonCompletionBlock)completionBlock;
++ (void)showCancelOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertButtonCompletionBlock)completionBlock;
+
 
 
 @end

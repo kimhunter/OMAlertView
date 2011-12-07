@@ -27,12 +27,29 @@
     return self;
 }
 
++ (id)alertView
+{
+    return [[[self alloc] init] autorelease];
+}
+
++ (void)showCancelOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertButtonCompletionBlock)completionBlock
+{
+    OMAlertView *alertView = [[self alloc] init];
+    [alertView setTitle:title];
+    [alertView setMessage:message];
+    [alertView addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel")];
+    [alertView addButtonWithTitle:NSLocalizedString(@"OK", @"OK") andCompletionBlock:completionBlock];
+    [alertView setCancelButtonIndex:0];
+    [alertView show];
+    [alertView release];
+}
+
 
 
 - (void)addButtonWithTitle:(NSString *)aTitle andCompletionBlock:(OMAlertButtonCompletionBlock)completionBlock
 {
     NSAssert(aTitle, @"Title shouldn't be nil");
-    NSAssert([buttonBlocks objectForKey:aTitle], @"button title already exists");
+    NSAssert(![buttonBlocks objectForKey:aTitle], @"button title already exists");
     [self addButtonWithTitle:aTitle];
     [buttonBlocks setObject:completionBlock forKey:aTitle];
     

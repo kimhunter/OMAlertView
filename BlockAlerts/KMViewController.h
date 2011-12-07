@@ -10,4 +10,6 @@
 
 @interface KMViewController : UIViewController
 
+- (IBAction)basicAlert:(id)sender;
+
 @end

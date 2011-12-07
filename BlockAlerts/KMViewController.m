@@ -7,6 +7,7 @@
 //
 
 #import "KMViewController.h"
+#import "OMAlertView.h"
 
 @implementation KMViewController
 
@@ -57,4 +58,10 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)basicAlert:(id)sender
+{
+    [OMAlertView showCancelOkAlertWithTitle:@"Basic Alert" message:@"This is the basic alert with ok cancel buttons" completionBlock:^{
+        NSLog(@"You pressed Ok");
+    }];
+}
 @end
