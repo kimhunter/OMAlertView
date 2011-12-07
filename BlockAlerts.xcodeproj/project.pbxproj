@@ -15,6 +15,7 @@
 		3B51DFEE148F570E00A68F7B /* KMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DFED148F570E00A68F7B /* KMAppDelegate.m */; };
 		3B51DFF1148F570E00A68F7B /* KMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DFF0148F570E00A68F7B /* KMViewController.m */; };
 		3B51DFF4148F570E00A68F7B /* KMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B51DFF2148F570E00A68F7B /* KMViewController.xib */; };
+		3B51DFFD148F577200A68F7B /* OMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DFFC148F577200A68F7B /* OMAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		3B51DFDD148F570E00A68F7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3B51DFDF148F570E00A68F7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3B51DFE1148F570E00A68F7B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3B51DFE5148F570E00A68F7B /* BlockAlerts-Info.plist */ = {isa = PBXFileReference; path = "BlockAlerts-Info.plist"; sourceTree = "<group>"; };
+		3B51DFE5148F570E00A68F7B /* BlockAlerts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlockAlerts-Info.plist"; sourceTree = "<group>"; };
 		3B51DFE7148F570E00A68F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B51DFE9148F570E00A68F7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3B51DFEB148F570E00A68F7B /* BlockAlerts-Prefix.pch */ = {isa = PBXFileReference; path = "BlockAlerts-Prefix.pch"; sourceTree = "<group>"; };
-		3B51DFEC148F570E00A68F7B /* KMAppDelegate.h */ = {isa = PBXFileReference; path = KMAppDelegate.h; sourceTree = "<group>"; };
+		3B51DFEB148F570E00A68F7B /* BlockAlerts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockAlerts-Prefix.pch"; sourceTree = "<group>"; };
+		3B51DFEC148F570E00A68F7B /* KMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMAppDelegate.h; sourceTree = "<group>"; };
 		3B51DFED148F570E00A68F7B /* KMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAppDelegate.m; sourceTree = "<group>"; };
-		3B51DFEF148F570E00A68F7B /* KMViewController.h */ = {isa = PBXFileReference; path = KMViewController.h; sourceTree = "<group>"; };
+		3B51DFEF148F570E00A68F7B /* KMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMViewController.h; sourceTree = "<group>"; };
 		3B51DFF0148F570E00A68F7B /* KMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMViewController.m; sourceTree = "<group>"; };
 		3B51DFF3148F570E00A68F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KMViewController.xib; sourceTree = "<group>"; };
+		3B51DFFB148F577200A68F7B /* OMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMAlertView.h; sourceTree = "<group>"; };
+		3B51DFFC148F577200A68F7B /* OMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 		3B51DFCE148F570E00A68F7B = {
 			isa = PBXGroup;
 			children = (
+				3B51DFFA148F573700A68F7B /* src */,
 				3B51DFE3148F570E00A68F7B /* BlockAlerts */,
 				3B51DFDC148F570E00A68F7B /* Frameworks */,
 				3B51DFDA148F570E00A68F7B /* Products */,
@@ -96,6 +100,15 @@
 				3B51DFEB148F570E00A68F7B /* BlockAlerts-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B51DFFA148F573700A68F7B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3B51DFFB148F577200A68F7B /* OMAlertView.h */,
+				3B51DFFC148F577200A68F7B /* OMAlertView.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +177,7 @@
 				3B51DFEA148F570E00A68F7B /* main.m in Sources */,
 				3B51DFEE148F570E00A68F7B /* KMAppDelegate.m in Sources */,
 				3B51DFF1148F570E00A68F7B /* KMViewController.m in Sources */,
+				3B51DFFD148F577200A68F7B /* OMAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
