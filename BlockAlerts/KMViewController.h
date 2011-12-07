@@ -11,5 +11,7 @@
 @interface KMViewController : UIViewController
 
 - (IBAction)basicAlert:(id)sender;
+- (IBAction)singleButtonAlert:(id)sender;
+- (IBAction)customButtons:(id)sender;
 
 @end

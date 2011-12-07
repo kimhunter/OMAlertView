@@ -64,4 +64,30 @@
         NSLog(@"You pressed Ok");
     }];
 }
+
+- (IBAction)singleButtonAlert:(id)sender
+{
+    [OMAlertView showOkAlertWithTitle:@"Single Button" message:@"this is a single button alert" completionBlock:^{
+        NSLog(@"Single Button Pressed");
+    }];
+}
+
+- (IBAction)customButtons:(id)sender 
+{
+    OMAlertView *av = [OMAlertView alertViewWithTitle:@"Custom Buttons" message:@"and custom completion blocks"];
+    [av addButtonWithTitle:@"A" andCompletionBlock:^{
+        NSLog(@"Pressed A Button");
+    }];
+    [av addButtonWithTitle:@"B" andCompletionBlock:^{
+        NSLog(@"Pressed B Button");
+    }];
+    [av addButtonWithTitle:@"C" andCompletionBlock:^{
+        NSLog(@"Pressed C Button");
+    }];
+    
+    [av show];
+    
+}
 @end
+
+
