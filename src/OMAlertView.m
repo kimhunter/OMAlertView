@@ -27,9 +27,7 @@
     self = [super init];
     if (self)
     {
-        
         buttonBlocks = [[NSMutableDictionary alloc] init];
-        self.delegate = self;
     }
     return self;
 }
@@ -49,9 +47,7 @@
 
 + (void)showCancelOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertViewBlock)completionBlock
 {
-    OMAlertView *alertView = [self alertView];
-    [alertView setTitle:title];
-    [alertView setMessage:message];
+    OMAlertView *alertView = [self alertViewWithTitle:title message:message];
     [alertView addButtonWithTitle:NSLocalizedString(@"Cancel", @"Cancel")];
     [alertView addButtonWithTitle:NSLocalizedString(@"OK", @"OK") andCompletionBlock:completionBlock];
     [alertView setCancelButtonIndex:0];
@@ -60,9 +56,7 @@
 
 + (void)showOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertViewBlock)completionBlock
 {
-    OMAlertView *alertView = [self alertView];
-    [alertView setTitle:title];
-    [alertView setMessage:message];
+    OMAlertView *alertView = [self alertViewWithTitle:title message:message];
     [alertView addButtonWithTitle:NSLocalizedString(@"OK", @"OK") andCompletionBlock:completionBlock];
     [alertView show];
 }
@@ -73,6 +67,15 @@
     NSAssert(![buttonBlocks objectForKey:aTitle], @"button title already exists");
     [self addButtonWithTitle:aTitle];
     [buttonBlocks setObject:completionBlock forKey:aTitle];
+}
+- (void)show
+{
+    // Only set the delegate if it hasn't been done already
+    if (self.delegate == nil)
+    {
+        self.delegate = self;
+    }
+    [super show];
 }
 
 #pragma mark -
