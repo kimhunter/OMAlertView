@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B51DFDE148F570E00A68F7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B51DFDD148F570E00A68F7B /* UIKit.framework */; };
+		3B51DFE0148F570E00A68F7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B51DFDF148F570E00A68F7B /* Foundation.framework */; };
+		3B51DFE2148F570E00A68F7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B51DFE1148F570E00A68F7B /* CoreGraphics.framework */; };
+		3B51DFE8148F570E00A68F7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B51DFE6148F570E00A68F7B /* InfoPlist.strings */; };
+		3B51DFEA148F570E00A68F7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DFE9148F570E00A68F7B /* main.m */; };
+		3B51DFEE148F570E00A68F7B /* KMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DFED148F570E00A68F7B /* KMAppDelegate.m */; };
+		3B51DFF1148F570E00A68F7B /* KMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B51DFF0148F570E00A68F7B /* KMViewController.m */; };
+		3B51DFF4148F570E00A68F7B /* KMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B51DFF2148F570E00A68F7B /* KMViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B51DFD9148F570E00A68F7B /* BlockAlerts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockAlerts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B51DFDD148F570E00A68F7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B51DFDF148F570E00A68F7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B51DFE1148F570E00A68F7B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B51DFE5148F570E00A68F7B /* BlockAlerts-Info.plist */ = {isa = PBXFileReference; path = "BlockAlerts-Info.plist"; sourceTree = "<group>"; };
+		3B51DFE7148F570E00A68F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3B51DFE9148F570E00A68F7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B51DFEB148F570E00A68F7B /* BlockAlerts-Prefix.pch */ = {isa = PBXFileReference; path = "BlockAlerts-Prefix.pch"; sourceTree = "<group>"; };
+		3B51DFEC148F570E00A68F7B /* KMAppDelegate.h */ = {isa = PBXFileReference; path = KMAppDelegate.h; sourceTree = "<group>"; };
+		3B51DFED148F570E00A68F7B /* KMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMAppDelegate.m; sourceTree = "<group>"; };
+		3B51DFEF148F570E00A68F7B /* KMViewController.h */ = {isa = PBXFileReference; path = KMViewController.h; sourceTree = "<group>"; };
+		3B51DFF0148F570E00A68F7B /* KMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KMViewController.m; sourceTree = "<group>"; };
+		3B51DFF3148F570E00A68F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KMViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B51DFD6148F570E00A68F7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B51DFDE148F570E00A68F7B /* UIKit.framework in Frameworks */,
+				3B51DFE0148F570E00A68F7B /* Foundation.framework in Frameworks */,
+				3B51DFE2148F570E00A68F7B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B51DFCE148F570E00A68F7B = {
+			isa = PBXGroup;
+			children = (
+				3B51DFE3148F570E00A68F7B /* BlockAlerts */,
+				3B51DFDC148F570E00A68F7B /* Frameworks */,
+				3B51DFDA148F570E00A68F7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B51DFDA148F570E00A68F7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B51DFD9148F570E00A68F7B /* BlockAlerts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B51DFDC148F570E00A68F7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B51DFDD148F570E00A68F7B /* UIKit.framework */,
+				3B51DFDF148F570E00A68F7B /* Foundation.framework */,
+				3B51DFE1148F570E00A68F7B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B51DFE3148F570E00A68F7B /* BlockAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				3B51DFEC148F570E00A68F7B /* KMAppDelegate.h */,
+				3B51DFED148F570E00A68F7B /* KMAppDelegate.m */,
+				3B51DFEF148F570E00A68F7B /* KMViewController.h */,
+				3B51DFF0148F570E00A68F7B /* KMViewController.m */,
+				3B51DFF2148F570E00A68F7B /* KMViewController.xib */,
+				3B51DFE4148F570E00A68F7B /* Supporting Files */,
+			);
+			path = BlockAlerts;
+			sourceTree = "<group>";
+		};
+		3B51DFE4148F570E00A68F7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B51DFE5148F570E00A68F7B /* BlockAlerts-Info.plist */,
+				3B51DFE6148F570E00A68F7B /* InfoPlist.strings */,
+				3B51DFE9148F570E00A68F7B /* main.m */,
+				3B51DFEB148F570E00A68F7B /* BlockAlerts-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B51DFD8148F570E00A68F7B /* BlockAlerts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B51DFF7148F570E00A68F7B /* Build configuration list for PBXNativeTarget "BlockAlerts" */;
+			buildPhases = (
+				3B51DFD5148F570E00A68F7B /* Sources */,
+				3B51DFD6148F570E00A68F7B /* Frameworks */,
+				3B51DFD7148F570E00A68F7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockAlerts;
+			productName = BlockAlerts;
+			productReference = 3B51DFD9148F570E00A68F7B /* BlockAlerts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B51DFD0148F570E00A68F7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = None;
+			};
+			buildConfigurationList = 3B51DFD3148F570E00A68F7B /* Build configuration list for PBXProject "BlockAlerts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3B51DFCE148F570E00A68F7B;
+			productRefGroup = 3B51DFDA148F570E00A68F7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B51DFD8148F570E00A68F7B /* BlockAlerts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B51DFD7148F570E00A68F7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B51DFE8148F570E00A68F7B /* InfoPlist.strings in Resources */,
+				3B51DFF4148F570E00A68F7B /* KMViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B51DFD5148F570E00A68F7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B51DFEA148F570E00A68F7B /* main.m in Sources */,
+				3B51DFEE148F570E00A68F7B /* KMAppDelegate.m in Sources */,
+				3B51DFF1148F570E00A68F7B /* KMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B51DFE6148F570E00A68F7B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B51DFE7148F570E00A68F7B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B51DFF2148F570E00A68F7B /* KMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B51DFF3148F570E00A68F7B /* en */,
+			);
+			name = KMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B51DFF5148F570E00A68F7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B51DFF6148F570E00A68F7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B51DFF8148F570E00A68F7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockAlerts/BlockAlerts-Prefix.pch";
+				INFOPLIST_FILE = "BlockAlerts/BlockAlerts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3B51DFF9148F570E00A68F7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockAlerts/BlockAlerts-Prefix.pch";
+				INFOPLIST_FILE = "BlockAlerts/BlockAlerts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B51DFD3148F570E00A68F7B /* Build configuration list for PBXProject "BlockAlerts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B51DFF5148F570E00A68F7B /* Debug */,
+				3B51DFF6148F570E00A68F7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B51DFF7148F570E00A68F7B /* Build configuration list for PBXNativeTarget "BlockAlerts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B51DFF8148F570E00A68F7B /* Debug */,
+				3B51DFF9148F570E00A68F7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B51DFD0148F570E00A68F7B /* Project object */;
+}
