@@ -13,5 +13,6 @@
 - (IBAction)basicAlert:(id)sender;
 - (IBAction)singleButtonAlert:(id)sender;
 - (IBAction)customButtons:(id)sender;
+- (IBAction)causeARunLoop:(id)sender;
 
 @end

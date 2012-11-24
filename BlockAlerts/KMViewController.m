@@ -60,9 +60,12 @@
 
 - (IBAction)basicAlert:(id)sender
 {
-    [OMAlertView showCancelOkAlertWithTitle:@"Basic Alert" message:@"This is the basic alert with ok cancel buttons" completionBlock:^{
-        NSLog(@"You pressed Ok");
-    }];
+    
+    [OMAlertView showCancelOkAlertWithTitle:@"Basic Alert"
+                                    message:@"This is the basic alert with ok cancel buttons"
+                            completionBlock:[[^{
+        NSLog(@"You pressed Ok %@", sender);
+    } copy] autorelease]];
 }
 
 - (IBAction)singleButtonAlert:(id)sender
@@ -84,9 +87,15 @@
     [av addButtonWithTitle:@"C" andCompletionBlock:^{
         NSLog(@"Pressed C Button");
     }];
-    
+    av.alertViewCancel = [[^{
+        NSLog(@"%@", sender);
+    } copy] autorelease];
     [av show];
-    
+
+}
+
+- (IBAction)causeARunLoop:(id)sender {
+    NSLog(@"%@", sender);
 }
 @end
 
