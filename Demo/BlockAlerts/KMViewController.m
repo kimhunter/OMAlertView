@@ -87,7 +87,7 @@
     [av addButtonWithTitle:@"C" andCompletionBlock:^{
         NSLog(@"Pressed C Button");
     }];
-    av.performBlockOn = OMAlertViewBlockDidDismiss;
+    av.performBlockOn = OMAlertViewDidDismiss;
     [av show];
 
 }

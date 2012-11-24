@@ -28,7 +28,7 @@
     if (self)
     {
         _buttonBlocks = [[NSMutableDictionary alloc] init];
-        _performBlockOn = OMAlertViewBlockClicked;
+        _performBlockOn = OMAlertViewClicked;
     }
     return self;
 }
@@ -80,7 +80,7 @@
     [super show];
 }
 
-- (void)alertView:(UIAlertView *)alertView buttonIndex:(NSInteger)buttonIndex performBlockOn:(OMAlertPerformBlockOnEvent)calledBy
+- (void)alertView:(UIAlertView *)alertView buttonIndex:(NSInteger)buttonIndex performBlockOn:(OMAlertViewPerformOnEvent)calledBy
 {
     if (calledBy == self.performBlockOn)
     {
@@ -99,17 +99,17 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewBlockClicked];
+    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewClicked];
 }
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewBlockWillDismiss];
+    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewWillDismiss];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewBlockDidDismiss];
+    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewDidDismiss];
 }
 
 - (void)willPresentAlertView:(UIAlertView *)alertView

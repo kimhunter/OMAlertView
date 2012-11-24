@@ -27,10 +27,10 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    OMAlertViewBlockClicked,
-    OMAlertViewBlockWillDismiss,
-    OMAlertViewBlockDidDismiss
-} OMAlertPerformBlockOnEvent;
+    OMAlertViewClicked,
+    OMAlertViewWillDismiss,
+    OMAlertViewDidDismiss
+} OMAlertViewPerformOnEvent;
 
 /** 
     OMAlertViewBlock
@@ -53,7 +53,7 @@ typedef void (^OMAlertViewBlock)(void);
 @property (nonatomic, copy) OMAlertViewBlock didPresentAlertViewBlock;
 
 /** run button blocks on at the time specified by this */
-@property (nonatomic, assign) OMAlertPerformBlockOnEvent performBlockOn;
+@property (nonatomic, assign) OMAlertViewPerformOnEvent performBlockOn;
 
 #pragma mark - Class Methods
 
