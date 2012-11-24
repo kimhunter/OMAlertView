@@ -95,10 +95,17 @@
 
 - (void)willPresentAlertView:(UIAlertView *)alertView
 {
-    if (_willPresentAlertViewBlock) _willPresentAlertViewBlock();
+    if (_willPresentAlertViewBlock)
+    {
+        _willPresentAlertViewBlock();
+    }
 }
+
 - (void)didPresentAlertView:(UIAlertView *)alertView
 {
-    if(_didPresentAlertViewBlock) _didPresentAlertViewBlock();
+    if(_didPresentAlertViewBlock)
+    {
+        _didPresentAlertViewBlock();
+    }
 }
 @end
