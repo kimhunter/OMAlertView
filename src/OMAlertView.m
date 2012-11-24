@@ -9,9 +9,9 @@
 #import "OMAlertView.h"
 
 @implementation OMAlertView
-
 @synthesize didPresentAlertViewBlock = _didPresentAlertViewBlock;
 @synthesize willPresentAlertViewBlock = _willPresentAlertViewBlock;
+@synthesize performBlockOn = _performBlockOn;
 
 - (void)dealloc
 {
@@ -28,6 +28,7 @@
     if (self)
     {
         _buttonBlocks = [[NSMutableDictionary alloc] init];
+        _performBlockOn = OMAlertViewBlockClicked;
     }
     return self;
 }
@@ -79,18 +80,36 @@
     [super show];
 }
 
+- (void)alertView:(UIAlertView *)alertView buttonIndex:(NSInteger)buttonIndex performBlockOn:(OMAlertPerformBlockOnEvent)calledBy
+{
+    if (calledBy == self.performBlockOn)
+    {
+        NSString *clickedButtonTitle = [alertView buttonTitleAtIndex:buttonIndex];
+        OMAlertViewBlock completionBlock = nil;
+        
+        if (clickedButtonTitle && (completionBlock = [_buttonBlocks objectForKey:clickedButtonTitle]))
+        {
+            completionBlock();
+        }
+    }
+}
+
 #pragma mark -
 #pragma mark UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString *clickedButtonTitle = [alertView buttonTitleAtIndex:buttonIndex];
-    OMAlertViewBlock completionBlock = nil;
-    
-    if (clickedButtonTitle && (completionBlock = [_buttonBlocks objectForKey:clickedButtonTitle]))
-    {
-        completionBlock();
-    }
+    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewBlockClicked];
+}
+
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewBlockWillDismiss];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self alertView:alertView buttonIndex:buttonIndex performBlockOn:OMAlertViewBlockDidDismiss];
 }
 
 - (void)willPresentAlertView:(UIAlertView *)alertView

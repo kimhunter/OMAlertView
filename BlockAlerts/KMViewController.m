@@ -87,9 +87,7 @@
     [av addButtonWithTitle:@"C" andCompletionBlock:^{
         NSLog(@"Pressed C Button");
     }];
-    av.alertViewCancel = [[^{
-        NSLog(@"%@", sender);
-    } copy] autorelease];
+    av.performBlockOn = OMAlertViewBlockDidDismiss;
     [av show];
 
 }

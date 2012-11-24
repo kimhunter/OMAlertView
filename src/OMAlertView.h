@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    OMAlertViewBlockClicked,
+    OMAlertViewBlockWillDismiss,
+    OMAlertViewBlockDidDismiss
+} OMAlertPerformBlockOnEvent;
+
 typedef void (^OMAlertViewBlock)(void);
 
 @interface OMAlertView : UIAlertView<UIAlertViewDelegate>
@@ -18,6 +24,8 @@ typedef void (^OMAlertViewBlock)(void);
 @property (nonatomic, copy) OMAlertViewBlock willPresentAlertViewBlock;
 @property (nonatomic, copy) OMAlertViewBlock didPresentAlertViewBlock;
 
+/** run button blocks on at the time specified by this */
+@property (nonatomic, assign) OMAlertPerformBlockOnEvent performBlockOn;
 + (id)alertView;
 + (id)alertViewWithTitle:(NSString *)title message:(NSString *)message;
 + (void)showCancelOkAlertWithTitle:(NSString *)title message:(NSString *)message completionBlock:(OMAlertViewBlock)completionBlock;
