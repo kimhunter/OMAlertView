@@ -108,8 +108,9 @@
 				3B51DFFB148F577200A68F7B /* OMAlertView.h */,
 				3B51DFFC148F577200A68F7B /* OMAlertView.m */,
 			);
-			path = src;
-			sourceTree = "<group>";
+			name = src;
+			path = ../src;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -287,6 +288,7 @@
 				3B51DFF9148F570E00A68F7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
