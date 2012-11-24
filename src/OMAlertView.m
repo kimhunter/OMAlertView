@@ -15,10 +15,10 @@
 
 - (void)dealloc
 {
-    [buttonBlocks release];
+    self.delegate = nil;
+    [_buttonBlocks release];
     self.didPresentAlertViewBlock = nil;
     self.willPresentAlertViewBlock = nil;
-    self.delegate = nil;
     [super dealloc];
 }
 
@@ -27,7 +27,7 @@
     self = [super init];
     if (self)
     {
-        buttonBlocks = [[NSMutableDictionary alloc] init];
+        _buttonBlocks = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -64,10 +64,11 @@
 - (void)addButtonWithTitle:(NSString *)aTitle andCompletionBlock:(OMAlertViewBlock)completionBlock
 {
     NSAssert(aTitle, @"Title shouldn't be nil");
-    NSAssert(![buttonBlocks objectForKey:aTitle], @"button title already exists");
+    NSAssert(![_buttonBlocks objectForKey:aTitle], @"button title already exists");
     [self addButtonWithTitle:aTitle];
-    [buttonBlocks setObject:completionBlock forKey:aTitle];
+    [_buttonBlocks setObject:completionBlock forKey:aTitle];
 }
+
 - (void)show
 {
     // Only set the delegate if it hasn't been done already
@@ -86,7 +87,7 @@
     NSString *clickedButtonTitle = [alertView buttonTitleAtIndex:buttonIndex];
     OMAlertViewBlock completionBlock = nil;
     
-    if (clickedButtonTitle && (completionBlock = [buttonBlocks objectForKey:clickedButtonTitle]))
+    if (clickedButtonTitle && (completionBlock = [_buttonBlocks objectForKey:clickedButtonTitle]))
     {
         completionBlock();
     }

@@ -12,7 +12,7 @@ typedef void (^OMAlertViewBlock)(void);
 
 @interface OMAlertView : UIAlertView<UIAlertViewDelegate>
 {
-    NSMutableDictionary *buttonBlocks;
+    NSMutableDictionary *_buttonBlocks;
 }
 
 @property (nonatomic, copy) OMAlertViewBlock willPresentAlertViewBlock;
