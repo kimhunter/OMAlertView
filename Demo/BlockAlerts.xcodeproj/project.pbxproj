@@ -109,7 +109,7 @@
 				3B51DFFC148F577200A68F7B /* OMAlertView.m */,
 			);
 			name = src;
-			path = ../src;
+			path = ../OMAlertView;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */

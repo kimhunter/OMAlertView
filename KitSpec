@@ -1,2 +1,3 @@
 name: omalertview
 version: "1.0"
+source-directory: "OMAlertView"
