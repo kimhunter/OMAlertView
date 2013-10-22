@@ -40,9 +40,6 @@ typedef void (^OMAlertViewBlock)(void);
 
 /** OMAlertView extents UIAlertView to allow completion blocks for each button */
 @interface OMAlertView : UIAlertView<UIAlertViewDelegate>
-{
-    NSMutableDictionary *_buttonBlocks;
-}
 
 /** @name Properties */
 

@@ -8,10 +8,14 @@
 
 #import "OMAlertView.h"
 
-@implementation OMAlertView
+@interface OMAlertView ()
 @synthesize didPresentAlertViewBlock = _didPresentAlertViewBlock;
 @synthesize willPresentAlertViewBlock = _willPresentAlertViewBlock;
 @synthesize performBlockOn = _performBlockOn;
+@property (nonatomic, retain) NSMutableDictionary *buttonBlocks;
+@end
+
+@implementation OMAlertView
 
 - (void)dealloc
 {
