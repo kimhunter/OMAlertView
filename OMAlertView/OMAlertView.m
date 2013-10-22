@@ -25,7 +25,7 @@
 }
 #endif
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)
@@ -36,7 +36,7 @@
     return self;
 }
 
-+ (id)alertView
++ (instancetype)alertView
 {
 #if __has_feature(objc_arc)
     return [[self alloc] init];
@@ -45,7 +45,7 @@
 #endif
 }
 
-+ (id)alertViewWithTitle:(NSString *)title message:(NSString *)message
++ (instancetype)alertViewWithTitle:(NSString *)title message:(NSString *)message
 {
     OMAlertView *alertView = [self alertView];
     [alertView setTitle:title];
