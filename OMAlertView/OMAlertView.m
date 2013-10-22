@@ -72,9 +72,12 @@
 - (void)addButtonWithTitle:(NSString *)aTitle andCompletionBlock:(OMAlertViewBlock)completionBlock
 {
     NSAssert(aTitle, @"Title shouldn't be nil");
-    NSAssert(![_buttonBlocks objectForKey:aTitle], @"button title already exists");
+    NSAssert(!_buttonBlocks[aTitle], @"button title already exists");
     [self addButtonWithTitle:aTitle];
-    [_buttonBlocks setObject:completionBlock forKey:aTitle];
+    if (completionBlock)
+    {
+        _buttonBlocks[aTitle] = completionBlock;
+    }
 }
 
 - (void)show
@@ -92,9 +95,9 @@
     if (calledBy == self.performBlockOn)
     {
         NSString *clickedButtonTitle = [alertView buttonTitleAtIndex:buttonIndex];
-        OMAlertViewBlock completionBlock = nil;
+        OMAlertViewBlock completionBlock = _buttonBlocks[clickedButtonTitle];
         
-        if (clickedButtonTitle && (completionBlock = [_buttonBlocks objectForKey:clickedButtonTitle]))
+        if (clickedButtonTitle && completionBlock)
         {
             completionBlock();
         }
