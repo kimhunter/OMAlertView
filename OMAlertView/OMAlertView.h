@@ -26,11 +26,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum {
-    OMAlertViewClicked,
+typedef NS_ENUM(NSUInteger, OMAlertViewPerformOnEvent) {
+    OMAlertViewClicked = 1,
     OMAlertViewWillDismiss,
     OMAlertViewDidDismiss
-} OMAlertViewPerformOnEvent;
+};
 
 /** 
     OMAlertViewBlock
