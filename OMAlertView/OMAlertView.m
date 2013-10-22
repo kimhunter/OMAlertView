@@ -14,14 +14,16 @@
 
 @implementation OMAlertView
 
+#if !__has_feature(objc_arc)
 - (void)dealloc
 {
     self.delegate = nil;
-    [_buttonBlocks release];
+    self.buttonBlocks = nil;
     self.didPresentAlertViewBlock = nil;
     self.willPresentAlertViewBlock = nil;
     [super dealloc];
 }
+#endif
 
 - (id)init
 {
@@ -36,7 +38,11 @@
 
 + (id)alertView
 {
+#if __has_feature(objc_arc)
+    return [[self alloc] init];
+#else
     return [[[self alloc] init] autorelease];
+#endif
 }
 
 + (id)alertViewWithTitle:(NSString *)title message:(NSString *)message
