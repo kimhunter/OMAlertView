@@ -38,10 +38,10 @@
 
 + (instancetype)alertView
 {
-#if __has_feature(objc_arc)
-    return [[self alloc] init];
-#else
+#if !__has_feature(objc_arc)
     return [[[self alloc] init] autorelease];
+#else
+    return [[self alloc] init];
 #endif
 }
 
@@ -76,7 +76,12 @@
     [self addButtonWithTitle:aTitle];
     if (completionBlock)
     {
-        _buttonBlocks[aTitle] = completionBlock;
+#if !__has_feature(objc_arc)
+        _buttonBlocks[aTitle] = Block_copy(completionBlock);
+        Block_release(completionBlock);
+#else
+        _buttonBlocks[aTitle] = [completionBlock copy];
+#endif
     }
 }
 
