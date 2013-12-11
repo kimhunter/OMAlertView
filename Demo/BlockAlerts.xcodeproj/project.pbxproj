@@ -273,6 +273,7 @@
 		3B51DFF8148F570E00A68F7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlockAlerts/BlockAlerts-Prefix.pch";
 				INFOPLIST_FILE = "BlockAlerts/BlockAlerts-Info.plist";
@@ -284,6 +285,7 @@
 		3B51DFF9148F570E00A68F7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlockAlerts/BlockAlerts-Prefix.pch";
 				INFOPLIST_FILE = "BlockAlerts/BlockAlerts-Info.plist";
